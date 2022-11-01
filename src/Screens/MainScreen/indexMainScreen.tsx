@@ -3,6 +3,7 @@ import {SafeAreaView, Text, View} from 'react-native';
 import {styleMainScreen} from './styleMainScreen';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import theme from '../../global/theme';
+import CardList from '../../Components/CardList/indexCardList';
 
 const MainScreen: React.FC = () => {
   return (
@@ -15,6 +16,9 @@ const MainScreen: React.FC = () => {
           color={theme.colors.white}
         />
         <Text style={styleMainScreen.titleText}> MINHAS LISTAS </Text>
+      </View>
+      <View style={styleMainScreen.bodyCards}>
+        <CardList />
       </View>
     </SafeAreaView>
   );

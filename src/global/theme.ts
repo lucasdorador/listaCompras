@@ -7,5 +7,6 @@ export default {
     variable03: '#3D6858',
     colorBorder: 'rgba(110, 155, 137, 0.8)',
     white: '#FFFFFF',
+    secundaryWhite: '#D9D9D9',
   },
 };

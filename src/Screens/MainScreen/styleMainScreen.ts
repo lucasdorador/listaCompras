@@ -21,4 +21,8 @@ export const styleMainScreen = StyleSheet.create({
     color: theme.colors.white,
     paddingLeft: 10,
   },
+  bodyCards: {
+    display: 'flex',
+    margin: 15,
+  },
 });
