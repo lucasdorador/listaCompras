@@ -1,11 +1,14 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {SafeAreaView, ScrollView, Text, View} from 'react-native';
 import {styleMainScreen} from './styleMainScreen';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import theme from '../../global/theme';
 import CardList from '../../Components/CardList/indexCardList';
+import {useAppSelector} from '../../hooks/react-hooks-redux';
 
 const MainScreen: React.FC = () => {
+  const cards = useAppSelector(state => state.cards);
+
   return (
     <SafeAreaView style={styleMainScreen.container}>
       <View style={styleMainScreen.header}>
@@ -17,9 +20,19 @@ const MainScreen: React.FC = () => {
         />
         <Text style={styleMainScreen.titleText}> MINHAS LISTAS </Text>
       </View>
-      <View style={styleMainScreen.bodyCards}>
-        <CardList />
-      </View>
+      <ScrollView style={styleMainScreen.bodyCards}>
+        {cards &&
+          cards.length > 0 &&
+          cards.map(card => (
+            <CardList
+              key={card.id}
+              id={card.id}
+              description={card.description}
+              maxElements={card.maxElements}
+              totalElementsSelected={card.totalElementsSelected}
+            />
+          ))}
+      </ScrollView>
     </SafeAreaView>
   );
 };

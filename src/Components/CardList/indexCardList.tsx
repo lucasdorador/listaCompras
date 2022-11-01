@@ -1,26 +1,34 @@
 import React from 'react';
-import {Button, Text, View, TouchableHighlight} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import theme from '../../global/theme';
+import {Text, View, TouchableHighlight} from 'react-native';
 import ProgressBar from '../ProgressBar/indexProgressBar';
 import {StyleCardList} from './styleCardList';
 
-const CardList: React.FC = () => {
+interface IPropsCardComponent {
+  id: string;
+  description: string;
+  maxElements: number;
+  totalElementsSelected: number;
+}
+
+const CardList: React.FC<IPropsCardComponent> = props => {
   const handleLongPress = () => {
-    console.log('long press');
+    console.log(`long press id: ${props.id}`);
   };
   const handlePress = () => {
-    console.log('clicou');
+    console.log(`Clicou  id: ${props.id}`);
   };
 
   return (
     <TouchableHighlight
       onPress={handlePress}
       onLongPress={handleLongPress}
-      style={{borderRadius: 10}}>
+      style={{borderRadius: 10, marginBottom: 20}}>
       <View style={StyleCardList.ContainerMain}>
-        <ProgressBar />
-        <Text style={StyleCardList.Description}>Compras do Churrasco</Text>
+        <ProgressBar
+          currentPosition={props.totalElementsSelected}
+          maxElements={props.maxElements}
+        />
+        <Text style={StyleCardList.Description}>{props.description}</Text>
       </View>
     </TouchableHighlight>
   );

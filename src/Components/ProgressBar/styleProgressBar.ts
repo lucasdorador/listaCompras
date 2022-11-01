@@ -15,7 +15,6 @@ export const StyleProgressBar = StyleSheet.create({
     backgroundColor: theme.colors.secundaryWhite,
   },
   ProgressBar: {
-    width: '5%',
     backgroundColor: theme.colors.variable03,
   },
   TextPercent: {
