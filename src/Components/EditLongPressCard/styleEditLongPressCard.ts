@@ -3,7 +3,7 @@ import theme from '../../global/theme';
 
 export const styleEditLongPressCard = StyleSheet.create({
   containerMain: {
-    width: '95%',
+    width: '92%',
     padding: 15,
     justifyContent: 'center',
     backgroundColor: theme.colors.secundaryWhite,
@@ -17,7 +17,7 @@ export const styleEditLongPressCard = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
-    borderColor: theme.colors.primary,
+    borderColor: theme.colors.darkPrimary,
     borderWidth: 2,
   },
   header: {
@@ -29,7 +29,7 @@ export const styleEditLongPressCard = StyleSheet.create({
     fontWeight: 'bold',
     color: theme.colors.black,
     borderBottomWidth: 1,
-    borderColor: theme.colors.secundary,
+    borderColor: theme.colors.greenPrimary,
     marginBottom: 15,
   },
   textHeader: {

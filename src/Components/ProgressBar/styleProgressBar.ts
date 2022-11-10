@@ -5,7 +5,7 @@ export const StyleProgressBar = StyleSheet.create({
   PropertysProgressBar: {
     display: 'flex',
     borderRadius: 10,
-    height: 20,
+    height: 8,
   },
   ContainerMain: {
     display: 'flex',
@@ -15,7 +15,7 @@ export const StyleProgressBar = StyleSheet.create({
     backgroundColor: theme.colors.secundaryWhite,
   },
   ProgressBar: {
-    backgroundColor: theme.colors.variable03,
+    backgroundColor: theme.colors.greenLime,
   },
   TextPercent: {
     textAlign: 'right',

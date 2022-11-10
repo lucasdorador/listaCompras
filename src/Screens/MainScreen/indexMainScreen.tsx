@@ -46,7 +46,7 @@ const MainScreen: React.FC = () => {
             refreshing={refreshing}
             onRefresh={onRefresh}
             progressBackgroundColor={theme.colors.white}
-            colors={[theme.colors.primary]}
+            colors={[theme.colors.greenPrimary]}
           />
         }>
         {cards &&

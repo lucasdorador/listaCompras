@@ -40,13 +40,13 @@ const CardList: React.FC<IPropsCardComponent> = props => {
           borderWidth: props.card.id === id ? 2 : 0,
         }}>
         <View style={StyleCardList.ContainerMain}>
+          <Text style={StyleCardList.Description}>
+            {props.card.description}
+          </Text>
           <ProgressBar
             currentPosition={props.card.totalElementsSelected}
             maxElements={props.card.maxElements}
           />
-          <Text style={StyleCardList.Description}>
-            {props.card.description}
-          </Text>
         </View>
       </TouchableHighlight>
     </React.Fragment>

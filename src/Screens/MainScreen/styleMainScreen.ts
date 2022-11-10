@@ -4,7 +4,7 @@ import theme from '../../global/theme';
 export const styleMainScreen = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.primary,
+    backgroundColor: theme.colors.darkSecundary,
   },
   header: {
     display: 'flex',

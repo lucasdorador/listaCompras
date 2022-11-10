@@ -3,12 +3,13 @@ import theme from '../../global/theme';
 
 export const StyleCardList = StyleSheet.create({
   ContainerMain: {
+    display: 'flex',
     borderRadius: 10,
     backgroundColor: theme.colors.colorBorder,
-    paddingBottom: 30,
-    paddingTop: 30,
     paddingLeft: 10,
     paddingRight: 10,
+    height: 90,
+    justifyContent: 'space-evenly',
   },
   ContainerIcon: {
     display: 'flex',
@@ -16,7 +17,7 @@ export const StyleCardList = StyleSheet.create({
     marginBottom: 10,
   },
   Description: {
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: 'normal',
     color: theme.colors.white,
   },

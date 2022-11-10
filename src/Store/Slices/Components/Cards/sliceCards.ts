@@ -11,7 +11,7 @@ const initialState: IPropsCards[] = [
   {
     description: 'Compras do Mês',
     maxElements: 200,
-    totalElementsSelected: 30,
+    totalElementsSelected: 200,
     id: '100',
   },
   {
