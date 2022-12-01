@@ -1,21 +1,12 @@
 import React, {useState} from 'react';
-import {
-  RefreshControl,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-import {styleMainScreen} from './styleMainScreen';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import {RefreshControl, ScrollView, View} from 'react-native';
+import {styleHomePage} from './styleHomePage';
 import theme from '../../global/theme';
-import CardList from '../../Components/CardList/indexCardList';
+import CardList from '../../components/CardList/indexCardList';
 import {useAppSelector} from '../../hooks/react-hooks-redux';
-import EditLongPressCard from '../../Components/EditLongPressCard/indexEditLongPressCard';
-import {IPropsCards} from '../../Store/Slices/Components/Cards/sliceCards';
+import EditLongPressCard from '../../components/EditLongPressCard/indexEditLongPressCard';
 
-const MainScreen: React.FC = () => {
+const HomePage: React.FC = () => {
   const cards = useAppSelector(state => state.cards);
   const [refreshing, setRefreshing] = React.useState(false);
 
@@ -29,18 +20,9 @@ const MainScreen: React.FC = () => {
   }, []);
 
   return (
-    <SafeAreaView style={styleMainScreen.container}>
-      <View style={styleMainScreen.header}>
-        <Icon
-          onPress={() => console.log('teste')}
-          name="menu"
-          size={40}
-          color={theme.colors.white}
-        />
-        <Text style={styleMainScreen.titleText}> MINHAS LISTAS </Text>
-      </View>
+    <View style={styleHomePage.container}>
       <ScrollView
-        style={styleMainScreen.bodyCards}
+        style={styleHomePage.bodyCards}
         refreshControl={
           <RefreshControl
             refreshing={refreshing}
@@ -54,8 +36,8 @@ const MainScreen: React.FC = () => {
           cards.map(card => <CardList key={card.id} card={card} />)}
       </ScrollView>
       {openModalEditLongPressCard && <EditLongPressCard />}
-    </SafeAreaView>
+    </View>
   );
 };
 
-export default MainScreen;
+export default HomePage;

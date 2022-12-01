@@ -4,8 +4,8 @@ import {useAppDispatch, useAppSelector} from '../../hooks/react-hooks-redux';
 import {
   openCloseModalEditLongPressCard,
   setAlterCardClicked,
-} from '../../Store/Actions/Components/ModalEditLongPressCard/actionModalEditLongPressCard';
-import {IPropsCards} from '../../Store/Slices/Components/Cards/sliceCards';
+} from '../../store/actions/components/ModalEditLongPressCard/actionModalEditLongPressCard';
+import {IPropsCards} from '../../store/slices/components/Cards/sliceCards';
 import EditLongPressCard from '../EditLongPressCard/indexEditLongPressCard';
 import ProgressBar from '../ProgressBar/indexProgressBar';
 import {StyleCardList} from './styleCardList';

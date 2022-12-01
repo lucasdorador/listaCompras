@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import {useAppSelector} from '../../hooks/react-hooks-redux';
-import {openCloseModalEditLongPressCard} from '../../Store/Actions/Components/ModalEditLongPressCard/actionModalEditLongPressCard';
-import Button from '../Button/indexButton';
+import {openCloseModalEditLongPressCard} from '../../store/actions/components/ModalEditLongPressCard/actionModalEditLongPressCard';
+import CustomButton from '../Button/indexButton';
 import CustomModal from '../Modal/indexModal';
 import {styleEditLongPressCard} from './styleEditLongPressCard';
 
@@ -24,8 +24,8 @@ const EditLongPressCard: React.FC = props => {
             {cardClicked.description}
           </Text>
         </View>
-        <Button title="Editar" />
-        <Button title="Excluir" />
+        <CustomButton title="Editar" />
+        <CustomButton title="Excluir" />
       </View>
     </CustomModal>
   );

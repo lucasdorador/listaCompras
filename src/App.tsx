@@ -1,11 +1,14 @@
 import {Provider} from 'react-redux';
-import MainScreen from './Screens/MainScreen/indexMainScreen';
-import store from './Store/configureReduxStore';
+import store from './store/configureReduxStore';
+import {NavigationContainer} from '@react-navigation/native';
+import {Router} from './router/Router';
 
 const App = () => {
   return (
     <Provider store={store}>
-      <MainScreen />
+      <NavigationContainer>
+        <Router />
+      </NavigationContainer>
     </Provider>
   );
 };

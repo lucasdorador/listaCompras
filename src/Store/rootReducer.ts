@@ -1,10 +1,12 @@
 import {combineReducers} from '@reduxjs/toolkit';
-import sliceCards from './Slices/Components/Cards/sliceCards';
-import sliceModalEditLongPressCard from './Slices/Components/ModalEditLongPressCard/sliceModalEditLongPressCard';
+import sliceCards from './slices/components/Cards/sliceCards';
+import sliceModalEditLongPressCard from './slices/components/ModalEditLongPressCard/sliceModalEditLongPressCard';
+import sliceLoginPage from './slices/screens/Login/sliceLoginPage';
 
 const reducers = combineReducers({
   cards: sliceCards,
   modalEditLongPressCard: sliceModalEditLongPressCard,
+  loginPage: sliceLoginPage,
 });
 
 export default reducers;

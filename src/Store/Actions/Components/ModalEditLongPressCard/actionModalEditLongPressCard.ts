@@ -1,9 +1,9 @@
 import {AppThunk} from '../../../configureReduxStore';
-import {IPropsCards} from '../../../Slices/Components/Cards/sliceCards';
+import {IPropsCards} from '../../../slices/components/Cards/sliceCards';
 import {
   setAlterCardClickedReducer,
   setOpenCloseModalEditLongPressCardReducer,
-} from '../../../Slices/Components/ModalEditLongPressCard/sliceModalEditLongPressCard';
+} from '../../../slices/components/ModalEditLongPressCard/sliceModalEditLongPressCard';
 
 export const openCloseModalEditLongPressCard =
   (state: boolean): AppThunk =>

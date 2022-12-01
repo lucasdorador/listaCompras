@@ -1,7 +1,7 @@
 import React from 'react';
 import {Modal, View} from 'react-native';
 import {styleModal} from './styleModal';
-import {AppThunk} from '../../Store/configureReduxStore';
+import {AppThunk} from '../../store/configureReduxStore';
 import {useAppDispatch} from '../../hooks/react-hooks-redux';
 
 type IPropsModalComponent = {
