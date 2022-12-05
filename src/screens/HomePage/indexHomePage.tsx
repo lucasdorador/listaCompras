@@ -12,6 +12,7 @@ import {
   alterCards,
   deleteCard,
 } from '../../store/actions/components/Cards/actionCards';
+import FloatingButtonAdd from '../../components/FloatingButtonAdd/indexFloatingButtonAdd';
 
 const HomePage: React.FC = () => {
   const cards = useAppSelector(state => state.cards);
@@ -78,6 +79,7 @@ const HomePage: React.FC = () => {
           cards.items.map(card => <CardList key={card.id} card={card} />)}
       </ScrollView>
       {openModalEditLongPressCard && <EditLongPressCard />}
+      <FloatingButtonAdd />
     </View>
   );
 };

@@ -3,7 +3,9 @@ import theme from '../../global/theme';
 
 export const styleHomePage = StyleSheet.create({
   container: {
+    display: 'flex',
     flex: 1,
+    position: 'relative',
     backgroundColor: theme.colors.darkSecundary,
   },
   titleText: {
