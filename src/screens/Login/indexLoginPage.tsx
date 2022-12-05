@@ -27,9 +27,11 @@ const LoginPage: React.FC<ScreenProps> = props => {
     auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
+        console.log('entrou');
         setLoading(false);
       })
       .catch(e => {
+        console.log('erro');
         setLoading(false);
         console.log(e);
       });

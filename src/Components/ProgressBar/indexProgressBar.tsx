@@ -24,7 +24,7 @@ const ProgressBar: React.FC<IPropsProgressBar> = props => {
     } else {
       setWidthProgress(0);
     }
-  }, [props.currentPosition]);
+  }, [props.currentPosition, props.maxElements]);
 
   return (
     <View style={StyleProgressBar.ContainerMain}>

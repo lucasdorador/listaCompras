@@ -1,0 +1,22 @@
+{
+  "cards": [
+    {
+      "description": "Compras do Mês",
+      "maxElements": 200,
+      "totalElementsSelected": 200,
+      "id": "100"
+    },
+    {
+      "description": "Churrasco",
+      "maxElements": 30,
+      "totalElementsSelected": 10,
+      "id": "101"
+    },
+    {
+      "description": "Compras da Casa",
+      "maxElements": 800,
+      "totalElementsSelected": 450,
+      "id": "102"
+    }
+  ]
+}

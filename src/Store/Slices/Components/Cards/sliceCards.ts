@@ -1,61 +1,57 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-export interface IPropsCards {
+export interface IPropsCard {
   id: string;
   description: string;
   maxElements: number;
   totalElementsSelected: number;
+  createdAt: string;
+  updatedAt: string;
 }
 
-const initialState: IPropsCards[] = [
-  {
-    description: 'Compras do Mês',
-    maxElements: 200,
-    totalElementsSelected: 200,
-    id: '100',
-  },
-  {
-    description: 'Churrasco',
-    maxElements: 30,
-    totalElementsSelected: 10,
-    id: '101',
-  },
-  {
-    description: 'Compras da Casa',
-    maxElements: 800,
-    totalElementsSelected: 450,
-    id: '102',
-  },
-  {
-    description: 'Compras da Casa 2',
-    maxElements: 10,
-    totalElementsSelected: 5,
-    id: '103',
-  },
-  {
-    description: 'Compras da Casa 3',
-    maxElements: 100,
-    totalElementsSelected: 36,
-    id: '104',
-  },
-  {
-    description: 'Compras da Casa 4',
-    maxElements: 200,
-    totalElementsSelected: 105,
-    id: '105',
-  },
-  {
-    description: 'Compras da Casa 5',
-    maxElements: 123,
-    totalElementsSelected: 12,
-    id: '106',
-  },
-];
+interface IPropsCards {
+  items: IPropsCard[];
+}
+
+const initialState: IPropsCards = {
+  items: [],
+};
 
 export const SliceCards = createSlice({
   name: 'sliceCards',
   initialState,
-  reducers: {},
+  reducers: {
+    addNewCardsReducer(state, action: PayloadAction<IPropsCard[]>) {
+      return {
+        ...state,
+        items: action.payload.sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+        ),
+      };
+    },
+    alterCardsReducer(state, action: PayloadAction<IPropsCard[]>) {
+      return {
+        ...state,
+        items: action.payload.sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+        ),
+      };
+    },
+    deleteCardsReducer(state, action: PayloadAction<IPropsCard[]>) {
+      return {
+        ...state,
+        items: action.payload.sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+        ),
+      };
+    },
+  },
 });
+
+export const {addNewCardsReducer, alterCardsReducer, deleteCardsReducer} =
+  SliceCards.actions;
 
 export default SliceCards.reducer;
